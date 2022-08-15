@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}
+.title {
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(207, 86, 64);
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid rgb(207, 86, 64);
+    transition: 0.5s;
+}
+.container {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(-90deg, rgb(177, 177, 177), rgb(185, 184, 184));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.container:hover {
+    transform: rotate3d(2, 2, 0, 3.142rad);
+    cursor: pointer;
+}
+.container:hover span i{
+    transform: rotate3d(2, 2, 0, 3.142rad);
+}
+.container:hover .title{
+    transform: rotate3d(0, 2, 0, 3.142rad);
+}
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin-left: 100px;
+    margin-top: 10px;
+    align-items: center;
+}
+.checkbox-container i{
+    font-size:20px;
+    color: rgb(80, 177, 80);
+    transition: 0.5s;
+}
+input[type="checkbox"]{
+    appearance:none;
+    width: 80px;
+    height: 40px;
+    background-color: rgb(80, 177, 80);
+    position: relative;
+    border-radius:40px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px;
+    position: relative;
+    cursor: pointer;
+
+}
+input[type="checkbox"]:checked{
+    background-color: rgb(207, 86, 64);
+
+}
+input[type="checkbox"]:checked  + span i{
+    color: rgb(207, 86, 64);
+
+}
+input[type="checkbox"]::after{
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 2px;
+    width: 36px;
+    height: 36px;
+    background-color: rgb(78, 82, 78);
+    border-radius:40px;
+    transition: 0.5s;
+    
+
+}
+
+input[type="checkbox"]:checked::after{
+    left: 2px;
+    top: 2px;
+}
